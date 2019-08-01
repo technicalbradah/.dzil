@@ -12,8 +12,8 @@ perl:
     - "5.14"
 
 install:
-    - dzil authordeps --missing | cpanm --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
-    - dzil listdeps --author --missing | cpanm --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
+    - dzil authordeps --missing | cpanm
+    - dzil listdeps --author --missing | cpanm
 
 # Allow Travis to use Docker
 sudo: false
